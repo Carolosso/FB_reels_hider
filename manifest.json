@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Hide FB reels",
+    "description": "Hide Reels videos on your Facebook",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "declarativeContent",
+        "webNavigation"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "https://www.facebook.com/"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
